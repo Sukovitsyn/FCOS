@@ -1,0 +1,9 @@
+variant: fcos
+version: 1.1.0
+passwd:
+  users:
+    - name: kexc
+      password_hash: "$1$yoursalt$zuE/ptA7ymZMM1b55n2NQ1"
+      groups:
+        - wheel
+         
