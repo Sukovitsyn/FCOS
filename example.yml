@@ -1,9 +1,22 @@
 variant: fcos
 version: 1.1.0
+storage:
+  # This creates a directory. Its mode is set to 0755 by default, that
+  # is, readable and executable by all, and writable by the owner.
+  directories:
+  - path: /opt/tools
+    overwrite: true
+  files:
+    - path: /var/helloworld
+      overwrite: true
+      contents:
+        inline: Hello, world!
+      # Sets the file mode to 0644 (readable by all, also writable by the
+      # owner).
+      mode: 0644
 passwd:
   users:
     - name: kexc
       password_hash: "$1$yoursalt$zuE/ptA7ymZMM1b55n2NQ1"
       groups:
         - wheel
-         
